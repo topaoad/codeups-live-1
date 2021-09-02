@@ -1,5 +1,7 @@
-.p-vision {
-
+.p-vision__inner {
+  @include mq(tab){
+    padding-left: rem(226);
+  }
 }
 
 .p-vision__content {
@@ -21,6 +23,9 @@
   font-size: rem(14);
   font-weight: 400;
   line-height: 2;
+  @include mq(tab){
+    font-size: rem(16);
+  }
 }
 
 .p-vision__text:nth-child(n + 2){

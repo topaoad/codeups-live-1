@@ -2,6 +2,9 @@
 	position: relative;
 	height: rem(449);
 	z-index: -100;
+	@include mq(tab){
+		height: rem(464);
+	}
 }
 
 .p-sub-mv::after {
@@ -13,6 +16,10 @@
 	top: 0;
 	right: 0;
 	z-index: -10;
+	@include mq(tab){
+		height: rem(464);
+		width: 54%;
+	}
 }
 
 .p-sub-mv__img {
