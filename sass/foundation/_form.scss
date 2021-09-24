@@ -105,15 +105,11 @@ input[type="checkbox"] + span {
 	position: relative;
 	// margin-left: 8px;
 	color: $text-color;
-	font-size: 1rem;
-	text-align: center;
-	line-height: 1;
 	cursor: pointer;
 }
 input[type="radio"] + span::before,
 input[type="checkbox"] + span::before {
 	position: absolute;
-	top: 50%;
 	left: 0;
 	width: 16px;
 	height: 16px;
@@ -132,7 +128,6 @@ legend {
 }
 
 /* button */
-input[type="submit"],
 input[type="reset"],
 input[type="button"],
 button {
@@ -212,8 +207,7 @@ input[type="radio"] + span:hover::before,
 input[type="checkbox"] + span:hover::before {
 	border-color: #000;
 }
-input[type="radio"] + span:hover::after,
-input[type="checkbox"] + span:hover::after {
+input[type="radio"] + span:hover::after {
 	position: absolute;
 	content: "";
 	top: 50%;

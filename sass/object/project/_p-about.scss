@@ -21,7 +21,7 @@
   background-position: center;
   background-size: cover;
   position: relative;
-  z-index: -1;
+  z-index: 1;
   @include mq(tab){
     padding-left: rem(50);
     padding-top: rem(110);

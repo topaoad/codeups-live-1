@@ -14,9 +14,9 @@
   <?php wp_body_open(); ?>
   <header class="l-header p-header <?php if(is_front_page()){ echo 'js-top-header' ;} else {echo 'js-sub-header';}?>">
     <div class="p-header__inner">
-      <div class="p-header__logo">
+      <a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="p-header__logo">
         <img class="c-logo" src="<?php echo get_template_directory_uri() ?>/assets/img/common/logo.svg" alt="タイトルロゴ">
-      </div>
+      </a>
       <div class="p-header__drawer c-hamburger js-hamburger">
         <span></span>
         <span></span>
@@ -30,7 +30,22 @@
         <div class="p-drawer-menu__logo">
           <img src="<?php echo get_template_directory_uri() ?>/assets/img/common/logo-menu.svg" alt="タイトルロゴ">
         </div>
-        <ul class="p-drawer-menu__items">
+
+
+        <?php
+          $defaults = array(
+            'theme_location'  => 'main',
+            'depth' => 1,
+            'container'       => 'nav',
+            'container_class' => 'menu-nav',
+            'menu_class'      => 'p-drawer-menu__items',
+            'add_li_class'    => 'p-drawer-menu__item', // liタグへclass追加
+          );
+          wp_nav_menu( $defaults );
+          ?>
+
+
+        <!-- <ul class="p-drawer-menu__items">
           <li class="p-drawer-menu__item">
             <a href="<?php echo esc_url( home_url( '/about/' ) ); ?>">about us</a>
           </li>
@@ -46,8 +61,7 @@
           <li class="p-drawer-menu__item">
             <a href="">contact</a>
           </li>
-        </ul>
-
+        </ul> -->
       </div>
     </div>
   </header>

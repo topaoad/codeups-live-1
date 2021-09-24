@@ -1,11 +1,23 @@
 
+.p-sub-contact {
+  padding-bottom: rem(80);
+}
 
 .p-sub-contact__text {
   font-size: rem(14);
   line-height: 1.7;
   letter-spacing: 0.04em;
+  @include mq(tab){
+    font-size: rem(16);
+  }
 }
 
+.l-inner.p-sub-contact__inner {
+  @include mq(tab) {
+    max-width: 700px + strip-unit($padding-pc) * 2;
+  }
+
+}
 
 
 .p-sub-contact__contents {
@@ -40,4 +52,14 @@
 
 .p-sub-contact__item {
   margin-top: rem(10);
+}
+
+.p-sub-contact__content--button {
+  text-align: center;
+}
+
+.p-sub-contact__content--center {
+  @include mq(tab){
+    text-align: center;
+  }
 }

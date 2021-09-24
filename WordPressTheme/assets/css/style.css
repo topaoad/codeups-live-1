@@ -103,10 +103,7 @@ input[type="checkbox"] + span {
 	color: #333;
 	cursor: pointer;
 	display: inline-block;
-	font-size: 1rem;
-	line-height: 1;
 	position: relative;
-	text-align: center;
 }
 
 input[type="radio"] + span::before,
@@ -117,7 +114,6 @@ input[type="checkbox"] + span::before {
 	height: 16px;
 	left: 0;
 	position: absolute;
-	top: 50%;
 	width: 16px;
 }
 
@@ -134,7 +130,6 @@ legend {
 
 /* button */
 
-input[type="submit"],
 input[type="reset"],
 input[type="button"],
 button {
@@ -215,8 +210,7 @@ input[type="checkbox"] + span:hover::before {
 	border-color: #000;
 }
 
-input[type="radio"] + span:hover::after,
-input[type="checkbox"] + span:hover::after {
+input[type="radio"] + span:hover::after {
 	background: #333;
 	content: "";
 	height: 8px;
@@ -534,6 +528,18 @@ summary {
 
 /* Remove all animations and transitions for people that prefer not to see them */
 
+.l-404 {
+	color: red;
+	font-size: 6.25rem;
+	margin-top: 12.5rem;
+	padding-bottom: 62.5rem;
+	text-align: center;
+}
+
+.l-breadcrumb {
+	font-size: 0.875rem;
+}
+
 .l-company {
 	margin-top: 5rem;
 }
@@ -547,6 +553,7 @@ summary {
 	position: fixed;
 	right: 0;
 	top: 0;
+	z-index: 9999;
 }
 
 .l-inner {
@@ -564,6 +571,23 @@ summary {
 
 .l-message {
 	margin-top: 5rem;
+}
+
+.l-pagenavi {
+	margin-top: 6.25rem;
+}
+
+.l-single {
+	margin-top: 2.5rem;
+}
+
+.l-sub-contact {
+	margin-top: 5rem;
+}
+
+.l-sub-topics {
+	margin-top: 3.75rem;
+	padding-bottom: 3.75rem;
 }
 
 .l-top-about {
@@ -693,7 +717,7 @@ summary {
 	padding-right: 15px;
 	padding-top: 3.125rem;
 	position: relative;
-	z-index: -1;
+	z-index: 1;
 }
 
 .p-about__content {
@@ -758,6 +782,81 @@ summary {
 
 .p-company__info {
 	margin-top: 1.875rem;
+}
+
+.p-contact-button__submit {
+	-webkit-appearance: none;
+	background-color: black;
+	background-image: none;
+	border: none;
+	border-radius: 0;
+	color: #fff;
+	cursor: pointer;
+	display: inline-block;
+	font-size: 0.875rem;
+	font-weight: bold;
+	margin: 0;
+	padding: 0.6875rem 4.125rem;
+	text-decoration: none;
+}
+
+.p-contact-button__submit:hover,
+.p-contact-button__submit:focus {
+	outline: none;
+}
+
+.p-contact-button__submit::-moz-foucus-inner {
+	border: none;
+	padding: 0;
+}
+
+.p-contact-check__item {
+	display: none;
+}
+
+.p-contact-check__item + span {
+	cursor: pointer;
+	display: inline-block;
+	font-size: 0.875rem;
+	letter-spacing: 0.04em;
+	line-height: 1.714285;
+	margin: 0 0.2em 0;
+	padding: 0 0 0 1.25rem;
+	position: relative;
+}
+
+.p-contact-check__item + span::before {
+	-webkit-transform: translateY(-50%);
+	background: #fff;
+	border: 1px solid rgba(0, 0, 0, 0.16);
+	border-radius: 2px;
+	content: "";
+	display: block;
+	height: 1em;
+	left: 0;
+	position: absolute;
+	top: 12px;
+	width: 1em;
+}
+
+.p-contact-check__item + span::after {
+	-webkit-transform: translateY(-50%) rotate(-45deg);
+	border-bottom: 3px solid #000;
+	border-left: 3px solid #000;
+	content: "";
+	display: block;
+	height: 0.6em;
+	left: 1px;
+	opacity: 0;
+	position: absolute;
+	top: 10px;
+	transform: translateY(-50%) rotate(-45deg);
+	transition: all 0.3s ease 0s;
+	width: 1em;
+}
+
+.p-contact-check__item:checked + span::after {
+	opacity: 1;
 }
 
 .p-entry-content {
@@ -1048,7 +1147,6 @@ summary {
 	display: flex;
 	flex-direction: row-reverse;
 	position: relative;
-	z-index: -1;
 }
 
 .p-contact__img {
@@ -1162,6 +1260,7 @@ summary {
 }
 
 .p-header__logo {
+	display: block;
 	height: auto;
 	width: 11.8125rem;
 }
@@ -1340,6 +1439,58 @@ summary {
 	margin-top: 0.625rem;
 }
 
+.p-privacy-policy {
+	background-color: #fff;
+	border: 1px solid #333;
+	height: 14.125rem;
+	overflow: scroll;
+	width: 100%;
+}
+
+.p-privacy-policy__content {
+	height: inherit;
+	padding: 0.625rem;
+}
+
+.p-privacy-policy__text {
+	font-size: 0.875rem;
+	letter-spacing: 0.04em;
+	line-height: 1.714285;
+}
+
+.p-single__date {
+	color: #CECECE;
+	display: block;
+	font-family: "Montserrat", sans-serif;
+	font-size: 1.25rem;
+	font-weight: 700;
+	letter-spacing: 0.015em;
+	line-height: 1;
+	margin-top: 1.25rem;
+}
+
+.p-single__inner.l-inner {
+	max-width: 50rem;
+}
+
+.p-single__title {
+	margin-top: 1.875rem;
+}
+
+.p-single__body {
+	margin-top: 3.75rem;
+	min-height: 62.5rem;
+}
+
+.p-single__body p {
+	font-size: 1rem;
+	line-height: 2;
+}
+
+.p-sub-contact {
+	padding-bottom: 5rem;
+}
+
 .p-sub-contact__text {
 	font-size: 0.875rem;
 	letter-spacing: 0.04em;
@@ -1377,6 +1528,10 @@ summary {
 
 .p-sub-contact__item {
 	margin-top: 0.625rem;
+}
+
+.p-sub-contact__content--button {
+	text-align: center;
 }
 
 .p-sub-mv {
@@ -1494,6 +1649,10 @@ summary {
 	margin-top: 1.875rem;
 }
 
+.p-topics__items.p-topics__items--wide {
+	margin-top: 0rem;
+}
+
 .p-topics__btn {
 	margin-top: 1.875rem;
 }
@@ -1519,6 +1678,38 @@ summary {
 
 .p-vision__text:nth-child(n + 2) {
 	margin-top: 1.75rem;
+}
+
+.wp-pagenavi {
+	clear: both;
+	text-align: center;
+}
+
+.wp-pagenavi a,
+.wp-pagenavi span {
+	background-color: #1C181A;
+	border: 1px solid #1C181A;
+	border-radius: 3px;
+	color: #fff;
+	margin: 0 2px;
+	padding: 8px 15px;
+	text-align: center;
+	text-decoration: none;
+	transition: 0.2s ease-in-out;
+	white-space: nowrap;
+}
+
+.wp-pagenavi a:hover {
+	background-color: #FF0037;
+	border-color: #FF0037;
+	color: #FFF;
+}
+
+.wp-pagenavi span.current {
+	background-color: #CFD5DA;
+	border-color: #CFD5D;
+	color: #777;
+	font-weight: bold;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -1570,6 +1761,15 @@ html {
 
 .l-message {
 	margin-top: 7.5rem;
+}
+
+.l-single {
+	margin-top: 6.25rem;
+}
+
+.l-sub-topics {
+	margin-top: 6.25rem;
+	padding-bottom: 6.25rem;
 }
 
 .l-top-about {
@@ -1645,6 +1845,22 @@ html {
 	padding: 0;
 }
 
+.p-contact-check__item + span {
+	font-size: 1rem;
+}
+
+.p-contact-check__item + span::before {
+	top: 14px;
+}
+
+.p-contact-check__item + span::after {
+	top: 12px;
+}
+
+.p-contact-radio {
+	flex-direction: row;
+}
+
 .p-contact {
 	padding: 3.75rem 0 7.5rem;
 }
@@ -1710,6 +1926,22 @@ html {
 	font-size: 4.5rem;
 }
 
+.p-privacy-policy__text {
+	font-size: 1rem;
+}
+
+.p-sub-contact__text {
+	font-size: 1rem;
+}
+
+.l-inner.p-sub-contact__inner {
+	max-width: 750px;
+}
+
+.p-sub-contact__content--center {
+	text-align: center;
+}
+
 .p-sub-mv {
 	height: 29rem;
 }
@@ -1743,6 +1975,12 @@ html {
 .p-topics__items {
 	margin-left: auto;
 	max-width: 43.75rem;
+	width: 100%;
+}
+
+.p-topics__items.p-topics__items--wide {
+	margin: 1.875rem auto 0;
+	max-width: initial;
 	width: 100%;
 }
 

@@ -9,6 +9,17 @@
   }
 }
 
+.p-topics__items.p-topics__items--wide {
+  margin-top: rem(0);
+  @include mq(tab){
+    max-width: initial;
+    width: 100%;
+    margin: rem(30) auto 0;
+  }
+}
+
+
+
 .p-topics__btn {
   margin-top: rem(30);
   @include mq(tab){
