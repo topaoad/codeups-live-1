@@ -741,6 +741,21 @@ summary {
 	margin-top: 1.875rem;
 }
 
+.p-box01__title {
+	background: #fff;
+	border: 1px solid #111;
+	border-radius: 32px;
+	display: inline-block;
+	margin-left: 2.375rem;
+	padding: 0.5rem 1.5625rem;
+}
+
+.p-box01__text {
+	border: 1px solid #111;
+	margin-top: -1.25rem;
+	padding: 2.75rem 1.375rem 2.125rem;
+}
+
 .p-box1__inner {
 	height: inherit;
 	margin: 0 auto;
@@ -1477,6 +1492,10 @@ summary {
 	margin-top: 1.875rem;
 }
 
+.p-single__box01 {
+	margin-top: 3rem;
+}
+
 .p-single__body {
 	margin-top: 3.75rem;
 	min-height: 62.5rem;
@@ -1877,6 +1896,10 @@ html {
 
 .p-explain {
 	padding-left: 18.75rem;
+}
+
+.p-explain__header {
+	font-weight: bold;
 }
 
 .p-map {

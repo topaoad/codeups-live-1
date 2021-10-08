@@ -23,6 +23,29 @@
       <h2 class="c-section-title"><?php the_title(); ?></h2>
     </div>
     <time datetime="<?php the_time( 'c' );?>" class="p-single__date"><?php the_time('Y.m.d'); ?></time>
+
+
+    <?php if(get_field('title')): ?>
+    <div class="p-single__box01 p-box01">
+      <span class="p-box01__title"><?php the_field('title'); ?></span>
+      <p class="p-box01__text"><?php the_field('text'); ?></p>
+    </div>
+    <?php else: ?>
+    <div class="p-single__box01 p-box01">
+      <span class="p-box01__title">非公開情報</span>
+      <p class="p-box01__text">詳細はお問い合わせください</p>
+    </div>
+    <?php endif; ?>
+
+
+
+    <?php if(get_field('title-2')): ?>
+    <div class="p-single__box01 p-box01">
+      <span class="p-box01__title"><?php the_field('title-2'); ?></span>
+      <p class="p-box01__text"><?php the_field('text-2'); ?></p>
+    </div>
+    <?php endif; ?>
+
     <div class="p-single__body">
       <?php the_content(); ?>
     </div>
